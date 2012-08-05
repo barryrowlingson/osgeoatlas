@@ -1,0 +1,55 @@
+
+\documentclass[a4paper,sfsidenotes,justified]{tufte-book}
+
+\usepackage{pdfpages}
+\usepackage{index}
+
+
+\title{The OSGeo Atlas}
+\author{Barry S. Rowlingson, Editor}
+\publisher{An OSGeo.org Production}
+
+\makeindex
+
+\begin{document}
+
+\maketitle
+
+\newpage
+\begin{fullwidth}
+~\vfill
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{\baselineskip}
+Copyright \copyright\ \the\year\ \thanklessauthor
+
+
+\end{fullwidth}
+
+
+
+\tableofcontents
+
+\chapter{Introduction}
+
+Welcome to the OSGeo Atlas. The purpose of this book is to show how
+beautiful cartography, insightful visualisation, and stunning design
+can be produced with the help of open-source tools.
+
+This book is itself produced using \LaTeX, the document typesetting system.
+
+Each map figure appears on the left with author notes and a smaller
+image on the right.
+
+
+\input{Map/Ritalin/map}
+
+\input{Map/Nuke/map}
+
+\input{Map/Viz/map}
+
+
+\backmatter
+
+\printindex
+
+\end{document}

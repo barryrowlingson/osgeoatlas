@@ -1,0 +1,37 @@
+
+\includepdf{Map/Ritalin/map.pdf}
+\chapter{Merseyside Ritalin}
+
+\begin{marginfigure}
+\includegraphics[width=2in,trim=7cm 7cm 7cm 15cm,clip=true]{Map/Ritalin/map.pdf}
+\end{marginfigure}
+
+Barry Rowlingson, Lancaster University
+
+This map shows how the rate of Methylphenidate (Ritalin) prescription varies
+greatly across the River Mersey in North-west England.
+
+The data comes from monthly published costings and item counts of
+prescription drugs for every general medical practice and clinic in 
+England. This information is public open data, downloadable as a 
+zipped CSV file.
+
+Each month is loaded into a PostGIS database for retrieval. In this map,
+we see point locations of medical practices coloured by spending per child.
+A background grid is an interpolation computed using the R statistics system,
+and significantly high regions are coloured bright red.
+
+Maps such as these enable the exploration and investigation of disparities in
+prescribing costs which may be due to underlying health reasons or changing
+practices within the health service.
+
+Software used:
+
+\begin{itemize}
+\item PostGIS \index{PostGIS}
+\item R \index{R}
+\item Quantum GIS \index{Quantum GIS}
+\end{itemize}
+
+Background map tiles are from OpenStreetMap. \index{OpenStreetMap}
+
