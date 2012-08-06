@@ -49,9 +49,35 @@ To get a large number of quality submissions we need to get the word out.
 Any publicity efforts on websites, forums, mailing lists etc would be
 welcome.
 
+Selection
+---------
+
+If people want to put their name down to help judge the entries, please
+email me.
+
 Production
 ----------
 
 Any help with the LaTeX would be handy too. I plan to use the
 Tufte-book class.
 
+Sponsorship
+-----------
+
+Organisations who want to fund the project should get in touch. Possible 
+sponsorship offers include spots on the backcover or inside frontmatter.
+
+Timeline
+========
+
+The book should be ready for the FOSS4G 2013 in Nottingham in September 
+2013. A rough timeline then looks like this:
+
+ * Now : Submissions open
+ * End March 2013 : Close of submission process
+ * April 2013 : Selection process
+ * End April 2013 : Notification, get paperwork signed
+ * May 2013 : Get final copy text/imagery from authors
+ * June 2013 : Build of PDF candidates
+ * Late July 2013 : Final Print-ready PDF prepared
+ * September 2013 : Release at FOSS4G 2013, Nottingham
