@@ -42,4 +42,16 @@ Sales of the book may generate a small profit for OSGeo.
 Help Required
 =============
 
+Publicity
+---------
+
+To get a large number of quality submissions we need to get the word out.
+Any publicity efforts on websites, forums, mailing lists etc would be
+welcome.
+
+Production
+----------
+
+Any help with the LaTeX would be handy too. I plan to use the
+Tufte-book class.
 
