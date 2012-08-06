@@ -1,7 +1,11 @@
 osgeoatlas
 ==========
 
-Creating a cartographic atlas for OSGeo
+Creating a cartographic atlas for OSGeo.
+
+The purpose of this book is to show how
+beautiful cartography, insightful visualisation, and stunning design
+can be produced with the help of open-source tools.
 
 
 Submissions
