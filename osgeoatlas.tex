@@ -3,7 +3,25 @@
 
 \usepackage{pdfpages}
 \usepackage{index}
+\newcommand{\openepigraph}[2]{%
+  %\sffamily\fontsize{14}{16}\selectfont
+  \begin{fullwidth}
+  \sffamily\LARGE
+  \begin{doublespace}
+  \noindent\allcaps{#1}\\% epigraph
+  \noindent\large\allcaps{#2}% author
+  \end{doublespace}
+  \end{fullwidth}
+}
 
+\newcommand{\map}[1]{
+\includepdf{#1/map.pdf}
+\newpage
+\begin{marginfigure}
+\includegraphics[width=1in]{#1/author.jpg}
+\end{marginfigure}
+\input{#1/map.tex}
+}
 
 \title{The OSGeo Atlas}
 \author{Barry S. Rowlingson, Editor}
@@ -25,7 +43,13 @@ Copyright \copyright\ \the\year\ \thanklessauthor
 
 \end{fullwidth}
 
+\newpage\thispagestyle{empty}
 
+\openepigraph{Where is the knowledge we have lost in information?}
+{T. S. Eliot}
+
+\openepigraph{For the execution of the voyage to the Indies, I did not make use of intelligence, mathematics or maps.}
+{Christopher Columbus}
 
 \tableofcontents
 
@@ -37,20 +61,16 @@ can be produced with the help of open-source tools.
 
 This book is itself produced using \LaTeX, the document typesetting system.
 
-Each map figure appears on the left with author notes and a smaller
-image on the right.
+Each map figure appears on the left page with author notes on the right page.
 
 \chapter{The Maps}
 Some blurb about the maps here.
 
-% eventually replace these with some \map{Folder} command
+\map{Map/Ritalin}
 
-\input{Map/Ritalin/map}
+\map{Map/Nuke}
 
-\input{Map/Nuke/map}
-
-\input{Map/Viz/map}
-
+\map{Map/Viz}
 
 \backmatter
 
