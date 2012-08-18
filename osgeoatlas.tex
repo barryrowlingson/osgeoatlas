@@ -1,6 +1,11 @@
 
 \documentclass[a4paper,sfsidenotes,justified]{tufte-book}
 
+
+\usepackage{caption}
+\captionsetup{labelformat=empty}
+
+\usepackage{import}
 \usepackage{pdfpages}
 \usepackage{index}
 \newcommand{\openepigraph}[2]{%
@@ -14,13 +19,18 @@
   \end{fullwidth}
 }
 
-\newcommand{\map}[1]{
-\includepdf{#1/map.pdf}
+\newcommand{\newmap}[2]{\section{#1}
+#2
+}
+
+\newcommand{\map}[2]{
+\includepdf[width=0.9\paperwidth]{#1/map.pdf}
 \newpage
-\begin{marginfigure}
+\begin{marginfigure}[1cm]
 \includegraphics[width=1in]{#1/author.jpg}
+\caption{#2}
 \end{marginfigure}
-\input{#1/map.tex}
+\import{#1}{map.tex}
 }
 
 \title{The OSGeo Atlas}
@@ -28,7 +38,7 @@
 \publisher{An OSGeo.org Production}
 
 \makeindex
-
+\setcounter{tocdepth}{2}
 \begin{document}
 
 \maketitle
@@ -66,11 +76,15 @@ Each map figure appears on the left page with author notes on the right page.
 \chapter{The Maps}
 Some blurb about the maps here.
 
-\map{Map/Ritalin}
+\map{Map/Ritalin/}{Barry Rowlingson}
 
-\map{Map/Nuke}
+\map{Map/Nuke/}{Barry Rowlingson}
 
-\map{Map/Viz}
+\map{Map/Viz/}{Barry Rowlingson}
+
+\map{Map/Twitter/}{Anita Graser}
+
+\map{Map/Norway/}{Tim Sutton}
 
 \backmatter
 
