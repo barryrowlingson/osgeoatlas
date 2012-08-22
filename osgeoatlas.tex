@@ -1,9 +1,11 @@
 
 \documentclass[a4paper,sfsidenotes,justified]{tufte-book}
 
-
+\usepackage{changepage}
 \usepackage{caption}
 \captionsetup{labelformat=empty}
+
+\pagecolor{white}
 
 \usepackage{import}
 \usepackage{pdfpages}
@@ -19,23 +21,43 @@
   \end{fullwidth}
 }
 
-\newcommand{\newmap}[2]{\section{#1}
-#2
-}
-
-\newcommand{\map}[2]{
-\includepdf[width=0.9\paperwidth]{#1/map.pdf}
-\newpage
-\begin{marginfigure}[1cm]
-\includegraphics[width=1in]{#1/author.jpg}
-\caption{#2}
-\end{marginfigure}
-\import{#1}{map.tex}
-}
 
 \title{The OSGeo Atlas}
 \author{Barry S. Rowlingson, Editor}
 \publisher{An OSGeo.org Production}
+
+
+\def\thecolour{white}
+\def\themaprotate{0}
+\newcommand{\mapauthor}[1]{\def \theauthor {#1}}
+\newcommand{\maptitle}[1]{\def \themaptitle {#1}}
+\newcommand{\mapcolour}[1]{\def \thecolour {#1}}
+\newcommand{\maptext}[1]{\def \themaptext {#1}}
+\newcommand{\maprotate}[1]{\def \themaprotate {#1}}
+
+\newenvironment{mapsection}{
+}{
+\newpage
+\pagecolor{\thecolour}\includepdf[angle=\themaprotate,turn=false,width=0.9\paperwidth]{\importpath map.pdf}
+% \pagecolor{\thecolour}\includepdf[width=0.9\paperwidth,angle=\themaprotate]{\importpath map.pdf}
+\pagecolor{white}
+\maprotate{0}
+\newpage
+\pagecolor{white}
+\begin{marginfigure}[1cm]
+\IfFileExists{author.jpg}{\includegraphics[width=1in]{author.jpg}}{}
+\caption{\theauthor}
+\end{marginfigure}
+\section{\themaptitle}
+
+\themaptext
+}
+
+\newcommand{\map}[1]{
+  \def \importpath {#1}
+  \import{#1}{map.tex}
+}
+
 
 \makeindex
 \setcounter{tocdepth}{2}
@@ -76,15 +98,24 @@ Each map figure appears on the left page with author notes on the right page.
 \chapter{The Maps}
 Some blurb about the maps here.
 
-\map{Map/Ritalin/}{Barry Rowlingson}
+% \map{Map/Ritalin/}{Barry Rowlingson}
 
-\map{Map/Nuke/}{Barry Rowlingson}
 
-\map{Map/Viz/}{Barry Rowlingson}
+\map{Map/Ritalin/}
 
-\map{Map/Twitter/}{Anita Graser}
+\map{Map/Nuke/} % {Barry Rowlingson}
 
-\map{Map/Norway/}{Tim Sutton}
+\map{Map/Viz/} % {Barry Rowlingson}
+
+\map{Map/Twitter/} % {Anita Graser}
+
+\map{Map/Norway/} % {Tim Sutton}
+
+\map{Map/Olympics/} % {Carson Farmer}
+
+\map{Map/Bikes/} % {James Cheshire}
+
+\map{Map/Trade/} %{James Cheshire}
 
 \backmatter
 
